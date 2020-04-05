@@ -146,12 +146,6 @@ http {
     }
 }
 EOF
-	#设置伪装站
-	rm -rf /usr/share/nginx/html/*
-	cd /usr/share/nginx/html/
-	wget https://github.com/yuegchina/tj2/raw/master/web.zip
-    	unzip web.zip
-	systemctl restart nginx.service
 	#申请https证书
 	mkdir /usr/src/trojan-cert
 	curl https://get.acme.sh | sh
